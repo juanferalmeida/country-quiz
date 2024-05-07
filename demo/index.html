@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background-image: url('/assets/purple.jpg');
+      background-size:cover;
+      background-position: center;
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: rgba(52, 57, 99, 0.8);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 80%; 
+      max-width: 800px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div id="demo"></div>
+  </div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../index.js';
+
+    render(
+      html`
+    
+        <question-counter></question-counter>
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+
+</html>
